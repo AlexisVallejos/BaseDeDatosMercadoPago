@@ -1,0 +1,188 @@
+body {
+    background-color: #04080a;
+    color: #deeaee;
+    font-family: Arial, sans-serif;
+  }
+  
+  .catalogo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .catalogo-title {
+    text-align: center;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .search-input, .category-select, .sort-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #22708d;
+    border-radius: 4px;
+    background-color: #0c1618;
+    color: #deeaee;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .category-select, .sort-select {
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .product-card {
+    border: 1px solid #22708d;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background-color: #0c1618;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(61, 177, 221, 0.1);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .product-title {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #deeaee;
+  }
+  
+  .product-category {
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #3db1dd;
+  }
+  
+  .buy-now-button {
+    background-color: #22708d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .buy-now-button:hover {
+    background-color: #3db1dd;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #0c1618;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #3db1dd;
+    text-decoration: none;
+  }
+  
+  .modal-image {
+    width: 50%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-category {
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .modal-price {
+    font-weight: bold;
+    font-size: 24px;
+    color: #3db1dd;
+    margin-bottom: 20px;
+  }
+  
+  .mercadopago-button-container {
+    
+    position: fixed;
+    bottom: 20px;
+    left: 57%;
+    transform: translateX(-58%);
+    z-index: 1001;
+    width: 300px;
+    top: 76%;
+  }
+  
+  @media (max-width: 768px) {
+    .filters {
+      flex-direction: column;
+    }
+  
+    .search-input, .category-select, .sort-select {
+      width: 100%;
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }

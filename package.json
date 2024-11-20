@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@mercadopago/sdk-react": "^0.0.19",
+    "@radix-ui/react-select": "^2.1.2",
+    "lucide-react": "^0.460.0"
+  }
+}
